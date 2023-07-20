@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="shortcut icon" href="#" />
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <!-- JS SCRIPTS -->
+    <script defer src="js/script.js"></script>
+    <title>ATM test</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="card-section">
+        <div class="card-text-box">
+          <h2 class="heading-secondary">Ingresa tus datos:</h2>
+          <form class="card-form" action="#">
+            <div>
+              <label for="select-where"></label>
+              <select name="" id="select-where" required>
+                <option value="">Elige entre uno de los usuarios:</option>
+                <option value="usuario1">Usuario 1</option>
+                <option value="usuario2">Usuario 2</option>
+                <option value="usuario3">Usuario 3</option>
+                <option value="usuario4">Usuario 4</option>
+                <option value="usuario5">Usuario 5</option>
+              </select>
+            </div>
+            <div>
+              <label for="pass">Contraseña</label>
+              <input
+                type="password"
+                name="password"
+                id="pass"
+                minlength="8"
+                required
+              />
+            </div>
+            <div>
+              <button class="btn btn-confirm">Ingresar</button>
+              <button class="btn btn-clear">Borrar</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-img-box">Una imagen va aqui</div>
+      </section>
+      <section class="account-section hidden">
+        <nav class="account-nav">
+          <div class="nav-logo">ATM Logo</div>
+          <div class="nav-close">Salir</div>
+        </nav>
+        <div class="account-user-info">
+          <h3 class="heading-tertiary">Cliente:</h3>
+          <p class="user-info">Usuario 1</p>
+          <h3 class="heading-tertiary">Saldo Actual:</h3>
+          <p class="user-info">$100</p>
+        </div>
+        <div class="account-user-cta">
+          <h3 class="heading-tertiary">Que deseas hacer:</h3>
+          <input type="number" placeholder="$$$" />
+          <button class="btn btn-cta">Ingresar</button>
+          <button class="btn btn-cta">Retirar</button>
+        </div>
+        <div class="account-user-result">
+          <h3 class="heading-tertiary">Nuevo Saldo:</h3>
+          <div class="new-balance">$500</div>
+          <button class="btn btn-confirm">Confirmar</button>
+          <button class="btn btn-clear">Cancelar</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <p class="footer-text">Hecho por <a href="#"> RoM</a></p>
+      <p class="footer-link">
+        <a href="mailto:romtega88@gmail.com">romtega88@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
