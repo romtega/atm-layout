@@ -1,3 +1,81 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+  - Font sizes (px):
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+  - Line height:
+  Default: 1
+  Small: 1.05
+  Paragraph: 1.6
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+:root {
+  --light-blue: #c5f6fa;
+  --mid-blue: #66d9e8;
+  --dark-blue: #22b8cf;
+
+  --light-gray: #e9ecef;
+  --mid-gray: #ced4da;
+  --dark-gray: #868e96;
+
+  --white-gray: #f8f9fa;
+
+  --light-font: 400;
+  --mid-font: 500;
+  --bold-font: 600;
+}
+
 .hidden {
   display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #555;
+  font-weight: var(--light-font);
+  line-height: 1;
+  background-color: var(--light-blue);
+  position: relative;
+}
+
+.heading-secondary {
+  font-weight: var(--bold-font);
+  font-size: 3.6rem;
+}
+
+.heading-tertiary {
+  font-weight: var(--mid-font);
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  font-size: 2.4rem;
 }

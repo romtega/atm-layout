@@ -1,0 +1,68 @@
+.main-nav {
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-icon {
+  height: 3.6rem;
+  width: 3.6rem;
+  padding: 1.6rem;
+  background-color: var(--mid-blue);
+  color: #333;
+  border-radius: 50%;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 2px solid var(--white-gray);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.card-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  padding: 3.2rem 2.4rem;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.card-form label {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.card-form input,
+.card-form select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 2.4rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 9px;
+}
+
+.card-form-btn {
+  display: inline-block;
+}
+
+.card-img-box {
+  background-image: url("/img/1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.account-section {
+  background-color: var(--white-gray);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

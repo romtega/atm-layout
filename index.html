@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--HEAD ICON-->
     <link rel="shortcut icon" href="#" />
     <!-- CSS LINKS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -16,15 +23,18 @@
   </head>
 
   <body>
+    <nav class="main-nav">
+      <a href="#"><ion-icon class="nav-icon" name="card-outline"></ion-icon></a>
+    </nav>
     <main>
       <section class="card-section">
         <div class="card-text-box">
           <h2 class="heading-secondary">Ingresa tus datos:</h2>
           <form class="card-form" action="#">
             <div>
-              <label for="select-where"></label>
+              <label for="select-where">Elige un usuario:</label>
               <select name="" id="select-where" required>
-                <option value="">Elige entre uno de los usuarios:</option>
+                <option value=""></option>
                 <option value="usuario1">Usuario 1</option>
                 <option value="usuario2">Usuario 2</option>
                 <option value="usuario3">Usuario 3</option>
@@ -33,24 +43,30 @@
               </select>
             </div>
             <div>
-              <label for="pass">Contraseña</label>
+              <label for="pass">Ingresa la contraseña:</label>
               <input
                 type="password"
                 name="password"
                 id="pass"
                 minlength="8"
+                placeholder="Minimo 8 caracteres"
                 required
               />
             </div>
-            <div>
-              <button class="btn btn-confirm">Ingresar</button>
-              <button class="btn btn-clear">Borrar</button>
+            <div class="card-form-btn">
+              <button class="btn btn-confirm" id="btn-confirm">Ingresar</button>
+              <button class="btn btn-clear" id="btn-clear">Borrar</button>
             </div>
           </form>
         </div>
-        <div class="card-img-box">Una imagen va aqui</div>
+        <div
+          class="card-img-box"
+          role="img"
+          aria-label="Cuida tus finanzas"
+        ></div>
       </section>
-      <section class="account-section hidden">
+
+      <section class="account-section hidden" id="account-section">
         <nav class="account-nav">
           <div class="nav-logo">ATM Logo</div>
           <div class="nav-close">Salir</div>
@@ -71,15 +87,25 @@
           <h3 class="heading-tertiary">Nuevo Saldo:</h3>
           <div class="new-balance">$500</div>
           <button class="btn btn-confirm">Confirmar</button>
-          <button class="btn btn-clear">Cancelar</button>
+          <button class="btn btn-clear" id="btn-clear">Cancelar</button>
         </div>
       </section>
     </main>
+
     <footer class="footer-section">
       <p class="footer-text">Hecho por <a href="#"> RoM</a></p>
       <p class="footer-link">
         <a href="mailto:romtega88@gmail.com">romtega88@gmail.com</a>
       </p>
     </footer>
+    <!--ION ICONS SCRIPT-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
