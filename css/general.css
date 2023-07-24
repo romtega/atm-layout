@@ -14,12 +14,12 @@
 */
 :root {
   --light-blue: #c5f6fa;
-  --mid-blue: #66d9e8;
-  --dark-blue: #22b8cf;
+  --mid-blue: #1e61d0;
+  --dark-blue: #216ce7;
 
-  --light-gray: #e9ecef;
-  --mid-gray: #ced4da;
-  --dark-gray: #868e96;
+  --light-gray: #868e96;
+  --mid-gray: #5e6369;
+  --dark-gray: #43474b;
 
   --white-gray: #f8f9fa;
 
@@ -52,30 +52,58 @@ body {
   color: #555;
   font-weight: var(--light-font);
   line-height: 1;
-  background-color: var(--light-blue);
+  background-color: var(--light-gray);
   position: relative;
 }
 
 .heading-secondary {
-  font-weight: var(--bold-font);
+  color: var(--dark-gray);
   font-size: 3.6rem;
+  font-weight: var(--bold-font);
+  margin-bottom: 1.2rem;
 }
 
 .heading-tertiary {
+  color: var(--light-gray);
+  font-size: 1.8rem;
   font-weight: var(--mid-font);
-  font-size: 3rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
+  background-color: var(--dark-blue);
+  color: var(--white-gray);
   display: inline-block;
+  padding: 0.8rem 1.6rem;
   border: none;
   cursor: pointer;
   text-decoration: none;
   font-family: inherit;
-  padding: 1.2rem 2.4rem;
-  border-radius: 9px;
-  font-size: 2.4rem;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: var(--bold-font);
+  border-radius: 8px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--mid-blue);
+}
+
+.btn-in {
+  background-color: #51cf66;
+}
+
+.btn-in:hover {
+  background-color: #49ba5c;
+}
+
+.btn-out {
+  background-color: #ff6b6b;
+}
+
+.btn-out:hover {
+  background-color: #e66060;
 }

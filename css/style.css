@@ -1,62 +1,56 @@
 .main-nav {
   width: 100%;
-  padding: 1rem;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: end;
 }
 
 .nav-icon {
   height: 3.6rem;
   width: 3.6rem;
-  padding: 1.6rem;
-  background-color: var(--mid-blue);
-  color: #333;
-  border-radius: 50%;
+  color: var(--dark-gray);
 }
 
-.card-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.login-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.login-form input {
   border: 2px solid var(--white-gray);
-  border-radius: 9px;
-  overflow: hidden;
+  padding: 0.4rem;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  transition: all 0.3s;
 }
 
-.card-text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
-  padding: 3.2rem 2.4rem;
+.login-form input:hover {
+  border: 2px solid var(--light-gray);
 }
 
-.card-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-
-.card-form label {
-  display: block;
-  font-size: 2.4rem;
+.card-link:link,
+.card-link:visited {
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1rem;
   margin-bottom: 1.6rem;
 }
 
-.card-form input,
-.card-form select {
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 2.4rem;
-  font-family: inherit;
-  border: none;
-  border-radius: 9px;
-}
-
-.card-form-btn {
-  display: inline-block;
-}
-
-.card-img-box {
-  background-image: url("/img/1.jpg");
-  background-size: cover;
-  background-position: center;
+.card-link:hover,
+.card-link:active {
+  text-decoration: underline;
 }
 
 .account-section {
@@ -65,4 +59,37 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.account-cta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.user-info {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.account-user-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.account-user-cta input {
+  border: 2px solid var(--white-gray);
+  padding: 0.4rem;
+  font-size: 1.6rem;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }

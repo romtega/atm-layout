@@ -18,84 +18,70 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <!-- JS SCRIPTS -->
-    <script defer src="js/script.js"></script>
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/db.js"></script>
     <title>ATM test</title>
   </head>
 
   <body>
     <nav class="main-nav">
-      <a href="#"><ion-icon class="nav-icon" name="card-outline"></ion-icon></a>
+      <a class="nav-link" href="#"
+        ><ion-icon class="nav-icon" name="card-outline"></ion-icon
+      ></a>
     </nav>
     <main>
       <section class="card-section">
-        <div class="card-text-box">
-          <h2 class="heading-secondary">Ingresa tus datos:</h2>
-          <form class="card-form" action="#">
-            <div>
-              <label for="select-where">Elige un usuario:</label>
-              <select name="" id="select-where" required>
-                <option value=""></option>
-                <option value="usuario1">Usuario 1</option>
-                <option value="usuario2">Usuario 2</option>
-                <option value="usuario3">Usuario 3</option>
-                <option value="usuario4">Usuario 4</option>
-                <option value="usuario5">Usuario 5</option>
-              </select>
-            </div>
-            <div>
-              <label for="pass">Ingresa la contraseña:</label>
-              <input
-                type="password"
-                name="password"
-                id="pass"
-                minlength="8"
-                placeholder="Minimo 8 caracteres"
-                required
-              />
-            </div>
-            <div class="card-form-btn">
-              <button class="btn btn-confirm" id="btn-confirm">Ingresar</button>
-              <button class="btn btn-clear" id="btn-clear">Borrar</button>
-            </div>
+        <div class="login-card">
+          <h2 class="heading-secondary">Bienvenido</h2>
+          <h3 class="heading-tertiary">Ingresa tu datos</h3>
+          <form class="login-form">
+            <input type="text" placeholder="Usuario" id="user-id" />
+            <input type="text" placeholder="Contraseña" id="user-password" />
+            <a class="card-link" href="#">No sabes cual es tu contraseña?</a>
+            <button class="btn" type="submit" id="btn-login">Entra</button>
           </form>
         </div>
-        <div
-          class="card-img-box"
-          role="img"
-          aria-label="Cuida tus finanzas"
-        ></div>
       </section>
 
       <section class="account-section hidden" id="account-section">
-        <nav class="account-nav">
-          <div class="nav-logo">ATM Logo</div>
-          <div class="nav-close">Salir</div>
-        </nav>
-        <div class="account-user-info">
-          <h3 class="heading-tertiary">Cliente:</h3>
-          <p class="user-info">Usuario 1</p>
-          <h3 class="heading-tertiary">Saldo Actual:</h3>
-          <p class="user-info">$100</p>
-        </div>
-        <div class="account-user-cta">
-          <h3 class="heading-tertiary">Que deseas hacer:</h3>
-          <input type="number" placeholder="$$$" />
-          <button class="btn btn-cta">Ingresar</button>
-          <button class="btn btn-cta">Retirar</button>
-        </div>
-        <div class="account-user-result">
-          <h3 class="heading-tertiary">Nuevo Saldo:</h3>
-          <div class="new-balance">$500</div>
-          <button class="btn btn-confirm">Confirmar</button>
-          <button class="btn btn-clear" id="btn-clear">Cancelar</button>
+        <div class="account-cta">
+          <div class="account-user-info">
+            <h3 class="heading-tertiary">Cliente:</h3>
+            <p class="user-info" id="username">Usuario 1</p>
+            <h3 class="heading-tertiary">Saldo Actual:</h3>
+            <p class="user-info" id="user-savings"></p>
+            <button class="btn btn-out" id="btn-logout">Salir</button>
+          </div>
+          <div class="account-user-cta">
+            <h3 class="heading-tertiary">Que deseas hacer:</h3>
+            <div class="buttons">
+              <button class="btn btn-in" id="btn-deposit">Ingresar</button>
+              <button class="btn btn-out" id="btn-withdraw">Retirar</button>
+            </div>
+            <input
+              type="number"
+              placeholder="Ingresa una cantidad"
+              id="user-amount"
+            />
+            <h3 class="heading-tertiary">Nuevo Saldo:</h3>
+            <p class="user-info" id="user-new-savings"></p>
+            <div class="buttons">
+              <button class="btn" id="btn-confirm">Confirmar</button>
+              <button class="btn" id="btn-clear">Borrar</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer-section">
-      <p class="footer-text">Hecho por <a href="#"> RoM</a></p>
+      <p class="footer-text">
+        Hecho por <a class="card-link" href="#"> RoM</a>
+      </p>
       <p class="footer-link">
-        <a href="mailto:romtega88@gmail.com">romtega88@gmail.com</a>
+        <a class="card-link" href="mailto:romtega88@gmail.com"
+          >romtega88@gmail.com</a
+        >
       </p>
     </footer>
     <!--ION ICONS SCRIPT-->
