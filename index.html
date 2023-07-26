@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -37,7 +37,9 @@
           <form class="login-form">
             <input type="text" placeholder="Usuario" id="user-id" />
             <input type="text" placeholder="Contraseña" id="user-password" />
-            <a class="card-link" href="#">No sabes cual es tu contraseña?</a>
+            <a class="card-link" href="#"
+              >No sabes cual es tu usuario o contraseña?</a
+            >
             <button class="btn" type="submit" id="btn-login">Entra</button>
           </form>
         </div>
@@ -46,23 +48,25 @@
       <section class="account-section hidden" id="account-section">
         <div class="account-cta">
           <div class="account-user-info">
-            <h3 class="heading-tertiary">Cliente:</h3>
-            <p class="user-info" id="username">Usuario 1</p>
-            <h3 class="heading-tertiary">Saldo Actual:</h3>
-            <p class="user-info" id="user-savings"></p>
+            <div>
+              <h3 class="heading-tertiary">Cliente:</h3>
+              <p class="user-info" id="username"></p>
+              <h3 class="heading-tertiary">Saldo Actual:</h3>
+              <p class="user-info" id="user-savings"></p>
+            </div>
             <button class="btn btn-out" id="btn-logout">Salir</button>
           </div>
           <div class="account-user-cta">
             <h3 class="heading-tertiary">Que deseas hacer:</h3>
-            <div class="buttons">
-              <button class="btn btn-in" id="btn-deposit">Ingresar</button>
-              <button class="btn btn-out" id="btn-withdraw">Retirar</button>
-            </div>
             <input
               type="number"
               placeholder="Ingresa una cantidad"
               id="user-amount"
             />
+            <div class="buttons">
+              <button class="btn btn-in" id="btn-deposit">Ingresar</button>
+              <button class="btn btn-out" id="btn-withdraw">Retirar</button>
+            </div>
             <h3 class="heading-tertiary">Nuevo Saldo:</h3>
             <p class="user-info" id="user-new-savings"></p>
             <div class="buttons">

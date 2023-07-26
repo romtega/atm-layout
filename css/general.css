@@ -13,7 +13,7 @@
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 :root {
-  --light-blue: #c5f6fa;
+  --light-blue: #3571d5;
   --mid-blue: #1e61d0;
   --dark-blue: #216ce7;
 
@@ -52,7 +52,7 @@ body {
   color: #555;
   font-weight: var(--light-font);
   line-height: 1;
-  background-color: var(--light-gray);
+  background-color: var(--light-blue);
   position: relative;
 }
 
