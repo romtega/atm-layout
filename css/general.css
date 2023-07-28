@@ -118,3 +118,11 @@ body {
   background-color: var(--mid-blue);
   color: var(--white-gray);
 }
+
+.footer-section {
+  margin-bottom: 2rem;
+}
+
+.footer-text {
+  color: var(--white-gray);
+}

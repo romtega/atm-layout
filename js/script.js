@@ -99,5 +99,7 @@ login.addEventListener("click", function (e) {
     logout.addEventListener("click", function () {
       hideAccountSection();
     });
+  } else {
+    alert("El usuario o la contraseña estan incorrectos, vuelve a intentar");
   }
 });
