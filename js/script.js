@@ -13,58 +13,91 @@ const username = document.querySelector("#username");
 const userSavings = document.querySelector("#user-savings");
 const amount = document.querySelector("#user-amount");
 const newSavings = document.querySelector("#user-new-savings");
+const loginCard = document.querySelector("#card");
 
-login.addEventListener("click", function () {
-  for (let i = 0; i < users.length; i++) {
-    if (
-      userSign.value == users[i].userId &&
-      userPasswordSign.value == users[i].password
-    ) {
-      accountCard.classList.remove("hidden");
-      username.textContent = users[i].userId;
-      userSavings.textContent = users[i].savings;
+function showAccountSection(user) {
+  loginCard.classList.add("hidden");
+  accountCard.classList.remove("hidden");
+  username.textContent = user.userId;
+  userSavings.textContent = `$${user.savings.toLocaleString()}`;
+}
 
-      deposit.addEventListener("click", function () {
-        newSavings.textContent = users[i].savings + Number(amount.value);
-      });
+function hideAccountSection() {
+  accountCard.classList.add("hidden");
+  loginCard.classList.remove("hidden");
+  userSign.value = "";
+  userPasswordSign.value = "";
+  username.textContent = "";
+  userSavings.textContent = "";
+  amount.value = "";
+  newSavings.textContent = "$";
+}
 
-      withdraw.addEventListener("click", function () {
-        newSavings.textContent = users[i].savings - Number(amount.value);
-      });
+function validateTransaction(amount) {
+  if (isNaN(amount) || amount <= 0) {
+    alert("Por favor, ingresa una cantidad válida.");
+    return false;
+  }
+  return true;
+}
 
-      confirm.addEventListener("click", function () {
-        if (parseInt(newSavings.textContent) > 990) {
+login.addEventListener("click", function (e) {
+  e.preventDefault();
+  const user = users.find(
+    (user) =>
+      user.userId === userSign.value && user.password === userPasswordSign.value
+  );
+
+  if (user) {
+    showAccountSection(user);
+
+    deposit.addEventListener("click", function () {
+      if (validateTransaction(amount.value)) {
+        const updatedSavings = user.savings + parseInt(amount.value);
+        if (updatedSavings > 990) {
           alert(
-            "Lo siento, no puedes tener mas de $990 en este tipo de cuenta"
+            "Lo siento, no puedes tener más de $990 en este tipo de cuenta."
           );
-        } else if (parseInt(newSavings.textContent < 10)) {
-          alert(
-            "Lo siento, no puedes tener menos de $10 en este tipo de cuenta"
-          );
-        } else if (newSavings.textContent == "") {
-          alert("Tienes que ingresar una cantidad primero");
         } else {
-          alert(`Ingresaste ${amount.value} a tu cuenta`);
-          userSavings.textContent = newSavings.textContent;
-          amount.value = "";
-          newSavings.textContent = "";
+          newSavings.textContent = `$${updatedSavings.toLocaleString()}`;
         }
-      });
+      }
+    });
 
-      clear.addEventListener("click", function () {
-        amount.value = "";
-        newSavings.textContent = "";
-      });
+    withdraw.addEventListener("click", function () {
+      if (validateTransaction(amount.value)) {
+        const updatedSavings = user.savings - parseInt(amount.value);
+        if (updatedSavings < 10) {
+          alert(
+            "Lo siento, no puedes tener menos de $10 en este tipo de cuenta."
+          );
+        } else {
+          newSavings.textContent = `$${updatedSavings.toLocaleString()}`;
+        }
+      }
+    });
 
-      logout.addEventListener("click", function () {
-        accountCard.classList.add("hidden");
-        userSign.value = "";
-        userPasswordSign.value = "";
-        username.textContent = "";
-        userSavings.textContent = "";
+    confirm.addEventListener("click", function () {
+      if (amount.value === "") {
+        alert("Tienes que ingresar una cantidad primero.");
+      } else {
+        const updatedSavings = parseInt(
+          newSavings.textContent.replace(/\D/g, "")
+        );
+        user.savings = updatedSavings;
+        userSavings.textContent = `$${updatedSavings.toLocaleString()}`;
         amount.value = "";
-        newSavings.textContent = "";
-      });
-    }
+        newSavings.textContent = "$";
+      }
+    });
+
+    clear.addEventListener("click", function () {
+      amount.value = "";
+      newSavings.textContent = "$";
+    });
+
+    logout.addEventListener("click", function () {
+      hideAccountSection();
+    });
   }
 });

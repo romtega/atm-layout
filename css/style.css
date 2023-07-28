@@ -1,21 +1,27 @@
 .main-nav {
   width: 100%;
-  padding: 1.2rem;
+  padding: 2.4rem;
   display: flex;
   justify-content: end;
 }
 
 .nav-icon {
-  height: 3.6rem;
-  width: 3.6rem;
-  color: var(--dark-gray);
+  height: 4.4rem;
+  width: 4.4rem;
+  color: #111;
+}
+
+.form-icon {
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 .login-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  gap: 2rem;
+  background-color: var(--white-gray);
   border-radius: 2rem;
   padding: 2rem;
 }
@@ -23,16 +29,24 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.4rem;
   width: 100%;
+}
+
+.form-inputs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .login-form input {
   border: 2px solid var(--white-gray);
   padding: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   border-radius: 8px;
   transition: all 0.3s;
+  width: 100%;
+  height: 4rem;
 }
 
 .login-form input:hover {
@@ -44,7 +58,7 @@
   color: var(--dark-blue);
   text-decoration: none;
   transition: all 0.3s;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1.6rem;
 }
 
@@ -59,7 +73,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 2rem;
 }
 
@@ -69,28 +83,23 @@
   gap: 5rem;
 }
 
-.user-info {
-  font-size: 2.4rem;
-  margin-bottom: 2.8rem;
-}
-
 .account-user-cta {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 100%;
 }
 
 .account-user-cta input {
-  border: 2px solid var(--white-gray);
+  border: 2px solid var(--light-gray);
   padding: 0.4rem;
   font-size: 1.6rem;
   border-radius: 8px;
+  width: 100%;
+  height: 4rem;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
 }
 

@@ -1,21 +1,7 @@
-/*
---- 01 TYPOGRAPHY SYSTEM
-  - Font sizes (px):
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-  - Line height:
-  Default: 1
-  Small: 1.05
-  Paragraph: 1.6
-
---- 07 WHITESPACE
-  - Spacing system (px)
-  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
 :root {
   --light-blue: #3571d5;
-  --mid-blue: #1e61d0;
-  --dark-blue: #216ce7;
+  --mid-blue: #2196f3;
+  --dark-blue: #0b7dda;
 
   --light-gray: #868e96;
   --mid-gray: #5e6369;
@@ -52,28 +38,40 @@ body {
   color: #555;
   font-weight: var(--light-font);
   line-height: 1;
-  background-color: var(--light-blue);
+  background: rgb(0, 14, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   position: relative;
 }
 
 .heading-secondary {
   color: var(--dark-gray);
-  font-size: 3.6rem;
+  font-size: 4.4rem;
   font-weight: var(--bold-font);
   margin-bottom: 1.2rem;
 }
 
 .heading-tertiary {
   color: var(--light-gray);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: var(--mid-font);
   margin-bottom: 2rem;
+}
+
+.user-info {
+  font-size: 3rem;
+  margin-bottom: 2.8rem;
+  display: "";
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-  background-color: var(--dark-blue);
+  background-color: var(--mid-blue);
   color: var(--white-gray);
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -81,29 +79,42 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   font-weight: var(--bold-font);
   border-radius: 8px;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: var(--mid-blue);
+  background-color: var(--dark-blue);
 }
 
 .btn-in {
-  background-color: #51cf66;
+  background-color: #04aa6d;
 }
 
 .btn-in:hover {
-  background-color: #49ba5c;
+  background-color: #46a049;
 }
 
 .btn-out {
-  background-color: #ff6b6b;
+  background-color: #f44336;
 }
 
 .btn-out:hover {
-  background-color: #e66060;
+  background-color: #da190b;
+}
+
+.btn-clear {
+  background-color: var(--white-gray);
+  border: 2px solid var(--mid-blue);
+  color: var(--dark-gray);
+}
+
+.btn-clear:hover {
+  background-color: var(--mid-blue);
+  color: var(--white-gray);
 }

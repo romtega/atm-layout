@@ -11,15 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!--HEAD ICON-->
-    <link rel="shortcut icon" href="#" />
     <!-- CSS LINKS -->
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <!-- JS SCRIPTS -->
-    <script defer src="/js/script.js"></script>
     <script defer src="/js/db.js"></script>
+    <script defer src="/js/script.js"></script>
     <title>ATM test</title>
   </head>
 
@@ -30,17 +28,28 @@
       ></a>
     </nav>
     <main>
-      <section class="card-section">
+      <section class="card-section" id="card">
         <div class="login-card">
           <h2 class="heading-secondary">Bienvenido</h2>
-          <h3 class="heading-tertiary">Ingresa tu datos</h3>
+          <h3 class="heading-tertiary">Ingresa tus datos</h3>
           <form class="login-form">
-            <input type="text" placeholder="Usuario" id="user-id" />
-            <input type="text" placeholder="Contraseña" id="user-password" />
+            <div class="form-inputs">
+              <ion-icon class="form-icon" name="person-sharp"></ion-icon
+              ><input type="text" placeholder="usuario" id="user-id" required />
+            </div>
+            <div class="form-inputs">
+              <ion-icon class="form-icon" name="key-sharp"></ion-icon>
+              <input
+                type="password"
+                placeholder="contraseña"
+                id="user-password"
+                required
+              />
+            </div>
             <a class="card-link" href="#"
               >No sabes cual es tu usuario o contraseña?</a
             >
-            <button class="btn" type="submit" id="btn-login">Entra</button>
+            <button class="btn" id="btn-login">Entrar</button>
           </form>
         </div>
       </section>
@@ -57,21 +66,25 @@
             <button class="btn btn-out" id="btn-logout">Salir</button>
           </div>
           <div class="account-user-cta">
-            <h3 class="heading-tertiary">Que deseas hacer:</h3>
-            <input
-              type="number"
-              placeholder="Ingresa una cantidad"
-              id="user-amount"
-            />
+            <div>
+              <h3 class="heading-tertiary">Que deseas hacer:</h3>
+              <input
+                type="number"
+                placeholder="Ingresa una cantidad"
+                id="user-amount"
+              />
+            </div>
             <div class="buttons">
               <button class="btn btn-in" id="btn-deposit">Ingresar</button>
               <button class="btn btn-out" id="btn-withdraw">Retirar</button>
             </div>
-            <h3 class="heading-tertiary">Nuevo Saldo:</h3>
-            <p class="user-info" id="user-new-savings"></p>
+            <div>
+              <h3 class="heading-tertiary">Nuevo Saldo:</h3>
+              <p class="user-info" id="user-new-savings">$</p>
+            </div>
             <div class="buttons">
               <button class="btn" id="btn-confirm">Confirmar</button>
-              <button class="btn" id="btn-clear">Borrar</button>
+              <button class="btn btn-clear" id="btn-clear">Borrar</button>
             </div>
           </div>
         </div>
