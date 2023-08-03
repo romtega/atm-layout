@@ -20,6 +20,8 @@
     <!-- JS SCRIPTS -->
     <script defer src="js/db.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/messages.js"></script>
+
     <title>ATM test</title>
   </head>
 
@@ -50,9 +52,15 @@
             </div>
             <a
               class="card-link"
+              id="card-link"
               href="https://github.com/romtega/atm-layout/tree/main#readme"
+              target="_blank"
               >No sabes cual es tu usuario o contraseña?</a
             >
+            <p class="pop-message" id="pop-message">
+              Prueba con "Usuario 1" "Contraseña1" para empezar, haz click en el
+              enlace para ver mas.
+            </p>
             <button class="btn" id="btn-login">Entrar</button>
           </form>
         </div>
@@ -97,7 +105,10 @@
 
     <footer class="footer-section">
       <p class="footer-text">
-        Hecho por <a class="card-link" href="#"> RoM</a>
+        Hecho por
+        <a class="card-link" href="https://github.com/romtega" target="_blank">
+          RoM</a
+        >
       </p>
       <p class="footer-link">
         <a class="card-link" href="mailto:romtega88@gmail.com"

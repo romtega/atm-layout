@@ -126,3 +126,28 @@ body {
 .footer-text {
   color: var(--white-gray);
 }
+
+/* Alert messages */
+
+.pop-message {
+  display: none;
+  position: absolute;
+  background-color: #fab005;
+  color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 25%;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.pop-message.active {
+  display: block;
+  opacity: 1;
+}
