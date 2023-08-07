@@ -14,6 +14,16 @@ const userSavings = document.querySelector("#user-savings");
 const amount = document.querySelector("#user-amount");
 const newSavings = document.querySelector("#user-new-savings");
 const loginCard = document.querySelector("#card");
+const tooltip = document.querySelector("#tooltip");
+
+function displayTooltip(message) {
+  tooltip.classList.add("active");
+  tooltip.textContent = message;
+}
+
+function hideTooltip() {
+  tooltip.classList.remove("active");
+}
 
 function showAccountSection(user) {
   loginCard.classList.add("hidden");
@@ -100,6 +110,15 @@ login.addEventListener("click", function (e) {
       hideAccountSection();
     });
   } else {
-    alert("El usuario o la contraseña estan incorrectos, vuelve a intentar");
+    displayTooltip(
+      "El usuario o la contraseña estan incorrectos, vuelve a intentar"
+    );
+  }
+  e.stopPropagation();
+});
+
+document.addEventListener("click", (e) => {
+  if (!tooltip.contains(e.target)) {
+    hideTooltip();
   }
 });

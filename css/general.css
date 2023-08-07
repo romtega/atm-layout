@@ -136,7 +136,7 @@ body {
   color: #111;
   border-radius: 8px;
   padding: 1.5rem;
-  width: 25%;
+  width: 36rem;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
@@ -150,4 +150,26 @@ body {
 .pop-message.active {
   display: block;
   opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fab005;
+  color: #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 36rem;
+  left: 50%;
+  top: 17%;
+  transform: translateX(-50%);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.tooltip.active {
+  opacity: 1;
+  z-index: 1000;
 }
